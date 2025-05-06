@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04
+FROM nvidia/cuda:12.4.0-runtime-ubuntu22.04
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -25,9 +25,9 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application
 COPY . .
-
 # Expose port
 EXPOSE 8000
-
 # Start both Ollama and the FastAPI application
-CMD ollama serve & sleep 10 && uvicorn main:app --host 0.0.0.0 --port 8000 --reload 
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+CMD ["/app/entrypoint.sh"]

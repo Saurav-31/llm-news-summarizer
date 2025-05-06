@@ -57,6 +57,27 @@ This application fetches news articles, analyzes them using OpenAI's GPT-3.5, an
    npm start
    ```
 
+## Docker Information
+
+### Current Docker Images
+```bash
+REPOSITORY          TAG       IMAGE ID       CREATED       SIZE
+news_app_frontend   latest    8468b026563d   2 hours ago   562MB
+news_app_backend    latest    156f037429bb   2 hours ago   5.99GB
+```
+
+### Running Containers
+```bash
+CONTAINER ID   IMAGE              COMMAND                  CREATED         STATUS         PORTS                    NAMES
+<container_id> news_app_frontend  "docker-entrypoint.s…"   2 hours ago     Up 2 hours     0.0.0.0:3000->3000/tcp   news_app_frontend
+<container_id> news_app_backend   "/opt/nvidia/nvidia_…"   2 hours ago     Up 2 hours     0.0.0.0:8000->8000/tcp   news_app_backend
+```
+
+## Application Screenshots
+
+### News Analysis View
+![News Analysis](docs/screenshots/news_analysis.png)
+
 ## Architecture
 
 - The application uses News API to fetch news articles

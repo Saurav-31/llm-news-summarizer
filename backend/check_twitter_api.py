@@ -6,7 +6,7 @@ NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 
 import requests
 
-url = "https://newsapi.org/v2/top-headlines?country=us&pageSize=10"
+url = "https://newsapi.org/v2/top-headlines?country=us&pageSize=1"
 headers = {"Authorization": "Bearer YOUR_API_KEY"}  # <-- NewsAPI expects it in query param, not headers
 
 # Correct usage
