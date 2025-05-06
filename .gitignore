@@ -1,0 +1,21 @@
+# Ignore Python cache and environments
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Ignore Conda installer
+Miniconda3-latest-Linux-x86_64.sh
+
+# Ignore Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore Docker artifacts
+*.log
+*.pid
+
+# Others
+.DS_Store
+.env
